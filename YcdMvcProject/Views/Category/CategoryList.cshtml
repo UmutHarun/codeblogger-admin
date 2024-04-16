@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Categories</h1>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<div class="pt-3">
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Category Name</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.CategoryId</td>
+                <td>@x.CategoryName</td>
+                <td>@x.CategoryDescription</td>
+                <td>@x.CategoryStatus</td>
+                <th><a class="btn btn-outline-danger" href="/Category/DeleteCategory/@x.CategoryId">Sil</a></th>
+                <th><a class="btn btn-outline-success" href="/Category/EditCategory/@x.CategoryId">Düzenle</a></th>
+            </tr>
+        }
+    </table>
+</div>
+
+<a href="/Category/AddCategory" class="btn btn-primary">Add New Category</a>

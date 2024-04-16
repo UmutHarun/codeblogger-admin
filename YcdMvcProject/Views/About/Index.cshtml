@@ -1,0 +1,41 @@
+﻿@using EntityLayer.Concrete
+@model List<About>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>About Page</h1>
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+
+<div class="pt-3">
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>About 1</th>
+            <th>About 2</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.AboutId</td>
+                <td>@x.AboutDetails1</td>
+                <td>@x.AboutDetails2</td>
+                <th><a class="btn btn-outline-danger" href="/Category/DeleteCategory/@x.AboutId">Sil</a></th>
+                <th><a class="btn btn-outline-warning" href="/Category/EditCategory/@x.AboutId">Düzenle</a></th>
+            </tr>
+        }
+    </table>
+</div>
+
+@Html.Partial("AddAbout","About")

@@ -1,0 +1,59 @@
+﻿@model EntityLayer.Concrete.Writer
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="w-50" style="padding:5rem;">
+        <form asp-action="EditWriter" method="post">
+            <div class="form-group d-none">
+                <input name="WriterId" value="@Model.WriterId" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label name="WriterName">Writer Name:</label>
+                <div style="height:.5rem;"></div>
+                <input name="WriterName" value="@Model.WriterName" class="form-control" />
+                <span class="text-danger" asp-validation-for="WriterName"></span>
+            </div>
+            <div style="height:1rem;"></div>
+            <div class="form-group">
+                <label name="WriterSurname">Writer Surname:</label>
+                <div style="height:.5rem;"></div>
+                <input name="WriterSurname" value="@Model.WriterSurname" class="form-control" />
+                <span class="text-danger" asp-validation-for="WriterSurname"></span>
+            </div>
+            <div style="height:1rem;"></div>
+            <div class="form-group">
+                <label name="WriterMail">Writer Mail:</label>
+                <div style="height:.5rem;"></div>
+                <input name="WriterMail" value="@Model.WriterMail" class="form-control" />
+                <span class="text-danger" asp-validation-for="WriterMail"></span>
+            </div>
+            <div style="height:1rem;"></div>
+            <div class="form-group">
+            <label name="WriterPassword">Writer Password:</label>
+            <div style="height:.5rem;"></div>
+            <input name="WriterPassword" value="@Model.WriterPassword" class="form-control" />
+            <span class="text-danger" asp-validation-for="WriterPassword"></span>
+            </div>
+            <div style="height:1rem;"></div>
+            <div class="form-group">
+            <label name="WriterImage">writer ımage:</label>
+            <div style="height:.5rem;"></div>
+            <input name="WriterImage" value="@Model.WriterImage" class="form-control" />
+            <span class="text-danger" asp-validation-for="WriterImage"></span>
+            </div>
+            <div style="height:1rem;"></div>
+            <div class="form-group">
+                <label name="WriterAbout">Writer About:</label>
+                <div style="height:.5rem;"></div>
+                <textarea style="resize:none" name="WriterAbout" class="form-control" rows="4" cols="50">@Model.WriterAbout</textarea>
+                @*<input type="ar" name="WriterAbout" class="form-control" />*@
+                <span class="text-danger" asp-validation-for="WriterAbout"></span>
+            </div>
+            <div style="height:.5rem;"></div>
+            <button class="btn btn-success">Update Writer</button>
+        </form>
+    </div>
+</div>
