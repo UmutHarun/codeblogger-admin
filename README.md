@@ -24,3 +24,7 @@ Our project is structured into the following layers:
 - Business Layer
 
 ![Des1](Photos/e1.PNG)
+![Des1](Photos/e2.PNG)
+![Des1](Photos/e3.PNG)
+![Des1](Photos/e4.PNG)
+![Des1](Photos/e5.PNG)
