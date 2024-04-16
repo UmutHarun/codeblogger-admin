@@ -23,4 +23,4 @@ Our project is structured into the following layers:
 - DataAccess Layer
 - Business Layer
 
-![Des1](Photos/e1.png)
+![Des1](Photos/e1.PNG)
